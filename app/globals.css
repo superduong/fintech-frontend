@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf8f5;
+  --foreground: #1a1a1a;
+  /* BuyNgon-inspired warm palette */
+  --bn-bg: #faf8f5;
+  --bn-surface: #fffefb;
+  --bn-hero: #fff4e6;
+  --bn-ink: #1a1a1a;
+  --bn-muted: #5c5c5c;
+  --bn-primary: #c45c26;
+  --bn-border: #e8e0d8;
+  --bn-chip: #f0ebe4;
 }
 
 @theme inline {
@@ -12,15 +21,8 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
+  background: var(--bn-bg);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
