@@ -1,6 +1,6 @@
 "use client";
 
-import { QRCodeSVG } from "react-qr-code";
+import QRCode from "react-qr-code";
 import type { BankTransferRead } from "@/services/types";
 import { formatVnd } from "@/lib/format";
 
@@ -84,7 +84,7 @@ export default function BankTransferCard({ data }: { data: BankTransferRead }) {
       {data.emv_qr_payload && (
         <div className="mt-6 flex flex-col items-center gap-3">
           <div className="rounded-lg border border-[var(--bn-border)] bg-white p-3">
-            <QRCodeSVG value={data.emv_qr_payload} size={200} level="M" />
+            <QRCode value={data.emv_qr_payload} size={200} level="M" />
           </div>
           <p className="text-center text-xs text-[var(--bn-muted)]">
             Quét mã bằng app ngân hàng (VietQR / Napas 247).
